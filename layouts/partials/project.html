@@ -2,8 +2,10 @@
   {{ range.Site.Params.project.list }}
   <dt>
     <a class="text-primary" href="{{ .url }}"
-      ><code>{{ .title }}</code></a
-    >
+      ><code>{{ .title }}</code></a>
+    <br>
+    <!--<img src={{ .imgurl }}/> -->
+    <i> {{ range .authors }} {{.}} {{ end}} </i>
   </dt>
   <dd class="text-dark mb-0 ml-3 markdownify">{{ .description | markdownify }}</dd>
   {{ end }}
